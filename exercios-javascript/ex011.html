@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros com JS</title>
+</head>
+<body>
+    <h1>Média do aluno v2.0</h1>
+
+    <button onclick="media()">calcular media</button>
+
+    <p id="msg">O resultado vai aparecer aqui...</p>
+
+    <script>
+        let msg = document.getElementById("msg");
+        const mediaAprovado = 6;
+
+        function media() {
+            let nomeAluno = window.prompt("Qual e o nome do aluno: ");
+            let nota1 = Number(window.prompt(`Qual foi a primeira nota de ${nomeAluno}: `));
+            let nota2 = Number(window.prompt(`Além de ${nota1}, qual foi a outra nota de ${nomeAluno}: `));
+
+            let media = (nota1 + nota2) / 2;
+
+            msg.innerHTML = `
+            Calculando a média final de <mark>${nomeAluno}</mark>. <br>
+            As notas obtidas foram <mark>${nota1} e ${nota2}</mark>. <br>
+            A média final será <mark>${media}</mark>. <br>
+            ${media >= mediaAprovado? ` A mensagem que temos é <mark style='color:green'; background-color:'white'>Meus parabéns!</mark>` 
+                : `A mensagem que temos é <mark style='color:red'>Estude um pouco mais!</mark>`}
+
+            `
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior valor</title>
+</head>
+<body>
+    <h1>Maior valor</h1>
+
+    <button onclick="avaliador()">Clique para começar</button>
+
+    <p id="msg">O resultado vai aparecer aqui...</p>
+
+    <script>
+        function avaliador() {
+            let num1 = parseFloat(prompt("Digite o primeiro número:"));
+            let num2 = parseFloat(prompt("Digite o segundo número:"));
+
+            if (num1 === num2) {
+                document.getElementById("msg").innerHTML = `Analisando os valores <mark>${num1}</mark> e <mark>${num2}</mark>, ambos são <b>IGUAIS</b>`;
+                return;
+            } else if (num1 > num2) {
+                document.getElementById("msg").innerHTML = `Analisando os valores <mark>${num1}</mark> e <mark>${num2}</mark>, o maior valor é <b>${num1}</b>`;
+            } else {
+                document.getElementById("msg").innerHTML = `Analisando os valores <mark>${num1}</mark> e <mark>${num2}</mark>, o maior valor é <b>${num2}</b>`;
+            }   
+        }
+    </script>
+</body>
+</html>

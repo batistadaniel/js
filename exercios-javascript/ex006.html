@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros com JS</title>
+</head>
+<body>
+    <h1>Somando dois números</h1>
+
+    <button onclick="soma()">Iniciar a soma</button>
+
+    <p id="msg">O resultado vem aqui...</p>
+
+    <script>
+        let msg = document.getElementById("msg");
+
+        function soma() {
+            let num1 = Number(window.prompt("Digite um número: "));
+            let num2 = Number(window.prompt("Digite outro número: "));
+
+            let resultado = num1 + num2;
+
+            msg.innerHTML = `A soma entre <mark>${num1}</mark> e <mark>${num2}</mark> é igual a <b>${resultado}</b> !`;
+        }
+    </script>
+</body>
+</html>
